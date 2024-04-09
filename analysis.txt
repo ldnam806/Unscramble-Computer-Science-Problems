@@ -1,0 +1,63 @@
+Task0:
+#Printing the first record of texts.
+#Printing the last record of calls.
+For each operation:
+
+Accessing specific elements of the texts and calls lists takes constant time, denoted as O(1).
+Printing also typically takes constant time.
+Since both operations have constant time complexity, the overall time complexity of the provided code is: O(1).
+
+In summary, the code has a constant time complexity, meaning its execution time does not depend on the size of the input (the length of the texts and calls lists).
+
+Task1:
+Time Complexity: O(n)
+
+In represents the total number of records in both the texts and calls lists
+The code iterates through all records once and performs constant-time operations within the loop, resulting in linear time complexity.
+
+In summary, the code has linear time complexity, meaning its execution time grows linearly with the number of records in the input.
+
+Task2:
+Time Complexity: O(n)
+
+Iterating through calls data: We iterate through each call record in the data. Suppose there are n call records in the data. Therefore, the time complexity of iterating through the calls data is O(n).
+Processing each call record: For each call record, we split the timestamp to extract the month and year, which takes constant time. We also update the total call durations in the phone_time dictionary, which takes constant time for each update. Therefore, the time complexity of processing each call record is O(1).
+Finding the telephone number with the longest total call duration: We use the max() function to find the maximum value in the phone_time dictionary,
+which has k entries (where k is the number of unique telephone numbers). Finding the maximum value in a dictionary takes linear time proportional to the number of entries in the dictionary, i.e., O(k).
+
+Overall, the time complexity of the code is dominated by the step of iterating through the calls data, which is: O(n).
+
+Task3:
+Part A:
+  Iterating through the calls list: O(n)  where n is the number of calls.
+  Checking and adding area codes and mobile prefixes: O(1) for each call.
+  Printing the list of codes: O(klogk), where k is the number of unique codes.
+  Total time complexity for Part A: O(n+klogk).
+Part B:
+  Counting calls made from Bangalore to other fixed lines in Bangalore: O(n).
+  Counting total calls made from Bangalore: O(n). 
+  Calculating the percentage: O(1).
+  Total time complexity for Part B: O(n).
+
+Storing unique codes: O(k), where k is the number of unique codes.
+Storing calls list: O(n), where n is the number of calls.
+Overall: O(n+k).
+
+In summary, the algorithm's time complexity is O(n+klogk) and its space complexity is O(n+k), where n is the number of calls and k is the number of unique codes.
+
+Task4:
+- Therefore, the time complexity of loading data from both CSV files is O(n+m).
+- Creating sets from the loaded data involves adding each item to a set.
+- Suppose there are x unique numbers in the calls data and y unique numbers in the texts data.
+- Adding each item to a set takes constant time on average (considering hashing).
+- Therefore, the time complexity of creating sets for calls and texts is O(x+y).
+- Identifying potential telemarketers:
+- Subtracting sets to identify potential telemarketers involves set operations which take linear time relative to the size of the sets involved.
+- In this case, the operation involves subtracting sets of numbers involved in texts and incoming calls from the set of outgoing call numbers.
+- Suppose there are p outgoing call numbers and q numbers involved in texts and incoming calls.
+- Therefore, the time complexity of identifying potential telemarketers is O(p+q).
+- Sorting potential telemarketers:
+  Sorting the potential telemarketers takes O(klogk) time, where k is the number of potential telemarketers.
+  Overall, the dominant time complexity in the code is creating sets for calls and texts, as well as identifying potential telemarketers, which is O(x+y+p+q). Sorting the potential telemarketers adds an additional 
+  O(klogk) time complexity, where k is the number of potential telemarketers.
+- Therefore, the Big O for the provided code is: O(n+m+x+y+p+q+klogk).

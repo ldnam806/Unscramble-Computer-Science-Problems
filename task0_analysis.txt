@@ -1,9 +1,0 @@
-#Printing the first record of texts.
-#Printing the last record of calls.
-For each operation:
-
-Accessing specific elements of the texts and calls lists takes constant time, denoted as O(1).
-Printing also typically takes constant time.
-Since both operations have constant time complexity, the overall time complexity of the provided code is: O(1).
-
-In summary, the code has a constant time complexity, meaning its execution time does not depend on the size of the input (the length of the texts and calls lists).
