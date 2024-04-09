@@ -1,0 +1,6 @@
+Time Complexity: O(n)
+
+n represents the total number of records in both the texts and calls lists
+The code iterates through all records once and performs constant-time operations within the loop, resulting in linear time complexity.
+
+In summary, the code has linear time complexity, meaning its execution time grows linearly with the number of records in the input.

@@ -1,0 +1,8 @@
+Time Complexity: O(n)
+
+Iterating through calls data: We iterate through each call record in the data. Suppose there are n call records in the data. Therefore, the time complexity of iterating through the calls data is O(n).
+Processing each call record: For each call record, we split the timestamp to extract the month and year, which takes constant time. We also update the total call durations in the phone_time dictionary, which takes constant time for each update. Therefore, the time complexity of processing each call record is O(1).
+Finding the telephone number with the longest total call duration: We use the max() function to find the maximum value in the phone_time dictionary,
+which has k entries (where k is the number of unique telephone numbers). Finding the maximum value in a dictionary takes linear time proportional to the number of entries in the dictionary, i.e., O(k).
+
+Overall, the time complexity of the code is dominated by the step of iterating through the calls data, which is: O(n).
