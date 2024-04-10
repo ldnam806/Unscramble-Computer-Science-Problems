@@ -53,7 +53,7 @@ for call in calls:
             end_index = call[1].find(')')
             codes_called.add(call[1][:end_index+1])  # Add area code
         elif ' ' in call[1]:
-            codes_called.add(call[1].split()[0])  # Add mobile prefix
+            codes_called.add(call[1][0:4]) # Add mobile prefix
         elif call[1].startswith('140'):
             codes_called.add('140')  # Add telemarketer code
 
